@@ -7,6 +7,7 @@ client = pymongo.MongoClient(mongo_uri)
 mydb = client.formDB
 mycoll = mydb.people
 app = Flask(__name__)
+
 @app.route('/')
 
 def form():
@@ -21,3 +22,5 @@ def redirect():
 	({'Name':request.form.get('Name'),'Gender':request.form.get("Gender"),'email':request.form.get('email'),'pno':request.form.get('pno')})
 	mycoll.insert_one({'Name':name,"Gender":gender,'Email':email,'Phone':ph_n})
 	return render_template("redirect.html", name=name, gender=gender, email=email, ph_n=ph_n)
+if __name__=="__main__":
+	app.run(debug=True)
