@@ -1,6 +1,51 @@
 <html>
+ <style>
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+input[type=text], select {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=submit]
+{width: 35%;
+padding: 14px 20px;
+border: none;
+cursor: pointer;
+margin: 8px 0;
+background-color:#7c00b2;
+color: white;
+}
+input[type=submit]: hover{background-color:#7c0083 }
+
+input[type=email],
+select{width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=number],
+select{width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+</style>
+
 <head><title>Form</title></head>
 <body>
+    <div class="header">
+  <h2>Personal Details Form</h2>
+</div>
     <form action="/form" method="POST">
     <label for='Name'>Please Enter Your Name:</label><br>
     <input type="text" id="Name" name="Name" placeholder="Name" ><br>
