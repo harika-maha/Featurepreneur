@@ -19,7 +19,7 @@ def redirect():
 	gender = request.form.get("Gender")
 	email = request.form.get("email")
 	ph_n = request.form.get("pno")
-	({'Name':request.form.get('Name'),'Gender':request.form.get("Gender"),'email':request.form.get('email'),'pno':request.form.get('pno')})
+
 	mycoll.insert_one({'Name':name,"Gender":gender,'Email':email,'Phone':ph_n})
 	return render_template("redirect.html", name=name, gender=gender, email=email, ph_n=ph_n)
 if __name__=="__main__":
